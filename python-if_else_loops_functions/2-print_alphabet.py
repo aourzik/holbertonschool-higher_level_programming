@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 
-while "abcdefgijklmnopqrstuvwxyz":
-    print("abcdefghijklmnopqrstuvwxyz")
-    break
+for c in range(ord('a'), ord('z') + 1):
+    print(chr(c), end="")
