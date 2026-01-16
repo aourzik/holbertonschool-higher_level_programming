@@ -10,6 +10,6 @@ if __name__ == "__main__":
         if len(args) == 1:
             print(f"{len(args)} argument:")
         else:
-            print(f"{len(args)} arguments:")      
+            print(f"{len(args)} arguments:")
     for i in range(len(args)):
         print(f"{i + 1}: {args[i]}")
