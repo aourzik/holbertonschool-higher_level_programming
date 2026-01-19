@@ -3,8 +3,8 @@
 def element_at(my_list, idx):
     for i in my_list:
         if i > idx:
-            print(None)
+            return None
         elif i < 0:
-            print(None)
+            return None
         else:
             print("{:d}".format(i))
