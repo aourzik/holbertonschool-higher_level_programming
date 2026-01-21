@@ -14,9 +14,9 @@ roman = {
 def roman_to_int(roman_string):
     total = 0
 
-    if roman_string is None or type(roman_string) != str:
+    if roman_string is None or isinstance(roman_string, str):
         return 0
-    
+
     for i in range(len(roman_string)):
         current_roman = roman[roman_string[i]]
 
