@@ -26,8 +26,4 @@ def roman_to_int(roman_string):
                 total += current_roman
         else:
             total += current_roman
-
-    if i not in roman_string:
-        return None
-
     return total
