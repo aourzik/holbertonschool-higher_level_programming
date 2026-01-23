@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 This module provides a function that adds two integers.
 
 It validates input values before performing
@@ -13,9 +13,9 @@ def add_integer(a, b=98):
     Adds two integers.
     The function accepts integers or float.
     Floats values are converted into integers before addition.
-    
+
     Arguments : a and b, the two numbers to add.
-    
+
     Return : the sum of a and b, an int.
     """
     if not isinstance(a, (int, float)):
