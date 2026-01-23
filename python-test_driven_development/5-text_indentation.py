@@ -18,22 +18,26 @@ def text_indentation(text):
     i = 0
     length = len(text)
 
-    while i < length:
-        if text[i] == " ":
-            if i == 0 or text[i - 1] in ".?:":
-                i += 1
-                continue
+    while (
+        i < length
+        and text[i] == " "
+        and (i == 0 or text[i - 1] in ".?:")
+    ):
+        i += 1
 
-        print(text[i], end="")
+    if i >= length:
+        break
 
-        if text[i] in ".?:":
-            print()
-            print()
+    print(text[i], end="")
+
+    if text[i] in ".?:":
+        print()
+        print()
+        i += 1
+
+        while i < length and text[i] == " ":
             i += 1
 
-            while i + 1 < length and text[i] == " ":
-                i += 1
+        continue
 
-            continue
-
-        i += 1
+    i += 1
