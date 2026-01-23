@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """ This is my calculation module """
 def add_integer(a, b=98):
     """ This function adds two integers a and b """
