@@ -9,7 +9,7 @@ def matrix_divided(matrix, div):
     All elements must be integers or floats, otherwise
     it raises a TypeError exception.
 
-    Return a matrix of the elements divided. 
+    Return a matrix of the elements divided.
     """
     if (not isinstance(matrix, list)
             or matrix == []
