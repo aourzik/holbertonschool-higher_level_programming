@@ -20,9 +20,8 @@ def text_indentation(text):
     new_line = True
 
     while i < length:
-        if new_line:
-            while i < length and text[i] == " ":
-                i += 1
+        if new_line and text[i] == " ":
+            i += 1
             continue
 
         print(text[i], end='')
