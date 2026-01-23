@@ -14,6 +14,7 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+
     i = 0
     length = len(text)
     new_line = True
@@ -33,4 +34,3 @@ def text_indentation(text):
                 i += 1
 
         i += 1
-
