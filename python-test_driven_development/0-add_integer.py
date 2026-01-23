@@ -1,7 +1,23 @@
 #!/usr/bin/python3
-""" This is my calculation module """
+""" 
+This module provides a function that adds two integers.
+
+It validates input values before performing
+the calculation and raises errors if the argument
+provided are not valid numbers.
+"""
+
+
 def add_integer(a, b=98):
-    """ This function adds two integers a and b """
+    """
+    Adds two integers.
+    The function accepts integers or float.
+    Floats values are converted into integers before addition.
+    
+    Arguments : a and b, the two numbers to add.
+    
+    Return : the sum of a and b, an int.
+    """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
