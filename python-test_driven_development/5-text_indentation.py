@@ -17,27 +17,20 @@ def text_indentation(text):
 
     i = 0
     length = len(text)
+    new_line = True
 
-    while (
-        i < length
-        and text[i] == " "
-        and (i == 0 or text[i - 1] in ".?:")
-    ):
-        i += 1
-
-    if i >= length:
-        break
-
-    print(text[i], end="")
-
-    if text[i] in ".?:":
-        print()
-        print()
-        i += 1
-
-        while i < length and text[i] == " ":
+    while i < length:
+        if new_line and text[i] == ' ':
             i += 1
+            continue
 
-        continue
+        print(text[i], end='')
+        new_line = False
 
-    i += 1
+        if text[i] in ['.', '?', ':']:
+            print('\n')
+            new_line = True
+            while i + 1 < length and text[i + 1] == ' ':
+                i += 1
+
+        i += 1
