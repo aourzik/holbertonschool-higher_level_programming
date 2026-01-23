@@ -24,13 +24,13 @@ def text_indentation(text):
             i += 1
             continue
 
-        print(text[i], end='')
+        print(text[i], end="")
         new_line = False
 
         if text[i] in ['.', '?', ':']:
             print('\n')
             new_line = True
-            while i + 1 < length and text[i + 1] == ' ':
+            while i + 1 < length and text[i + 1] == " ":
                 i += 1
 
         i += 1
