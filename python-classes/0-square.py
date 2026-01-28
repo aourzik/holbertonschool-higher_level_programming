@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a class without any import"""
+
 
 class Square:
-    """ Saquare defines a square and is an empty class"""
+    """ Square defines a square and is an empty class"""
     pass
