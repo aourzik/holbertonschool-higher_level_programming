@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""This module defines a classe named Rectangle."""
+"""This module defines a class named Rectangle."""
 
 
 class Rectangle:
     """Rectangle defines a rectangle."""
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -25,7 +25,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
-        self.widht = value
+        self.__width = value
 
     @height.setter
     def height(self, value):
@@ -34,4 +34,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
-        self.height = value
+        self.__height = value
