@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-"""This module defines a class who defines a square."""
+"""This module defines a class that defines a square."""
 
 
 class Square:
     """
-    Docstring for class Square.
-
-    @size: private instance attribute
-    The square is initialize with a size, an int, called size.
+    Initialize a square with a size argument.
     """
     def __init__(self, size):
-        self._size = size
+        self.__size = size
