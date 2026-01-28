@@ -7,7 +7,7 @@ class Square:
 
     def __init__(self, size=0):
         """Initialize the square with a size argument."""
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -29,8 +29,8 @@ class Square:
     
     def my_print(self):
         """Print the square using '#'."""
-        if self.size == 0:
+        if self.__size == 0:
             print()
         else:
-            for _ in range(self.size):
-                print(self.size * "#")
+            for _ in range(self.__size):
+                print(self.__size * "#")
