@@ -31,7 +31,6 @@ class Square:
         """Print the square using '#'."""
         if self.size == 0:
             print()
-            return
         else:
             for _ in range(self.size):
                 print(self.__size * "#")
