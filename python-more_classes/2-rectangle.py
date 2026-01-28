@@ -40,7 +40,7 @@ class Rectangle:
         """Return the area of Rectangle."""
         return self.__width * self.__height
 
-    def permieter(self):
+    def perimeter(self):
         """Return the perimeter of Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return 0
