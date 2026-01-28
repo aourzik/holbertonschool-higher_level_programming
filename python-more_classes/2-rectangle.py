@@ -42,4 +42,4 @@ class Rectangle:
 
     def permieter(self):
         """Return the perimeter of Rectangle."""
-        return 2 * (self.width + self.height)
+        return (2 * (self.width + self.height))
