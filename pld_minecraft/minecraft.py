@@ -28,6 +28,9 @@ class Character:
     def attack_action(self, target):
         target.damages(self.attack)
 
+    def get_heal(self, heal):
+        self.health += heal
+
 class Animals(Character):
     def __init__(self, name, health, movement):
         super().__init__(name, health, movement)
