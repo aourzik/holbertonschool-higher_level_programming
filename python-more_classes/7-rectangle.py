@@ -52,10 +52,12 @@ class Rectangle:
 
     def __str__(self):
         """Prints the rectangle."""
-        self.number_of_instances += 1
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self.width for _ in range(self.height)])
+        lines = []
+        for _ in range(self.__height):
+            lines.append(str(self.print_symbol) * self.__width)
+        return "\n".join(lines)
 
     def __repr__(self):
         """String representation of Rectangle."""
