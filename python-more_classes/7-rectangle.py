@@ -58,7 +58,7 @@ class Rectangle:
         else:
             line = []
             for _ in range(self.height):
-                line.append(str(Rectangle.print_symbol) * self.width)
+                line.append(Rectangle.print_symbol * self.width)
             return "\n".join(line)
 
     def __repr__(self):
