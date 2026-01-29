@@ -24,15 +24,15 @@ class Character:
     
     def damages(self, damage):
         self.health -= damage
+    
+    def attack_action(self, target):
+        target.damages(self.attack)
 
 class Animals(Character):
-    def __init__(self, type, health, movement):
-        super().__init__(health, movement)
-        self.type = type
+    def __init__(self, name, health, movement):
+        super().__init__(name, health, movement)
 
 
 class Monster(Character):
-    def __init__(self, type, health, xp, attack, movement, damage):
-        super().__init__(health, xp, attack, movement,damage)
-        self.type = type
-
+    def __init__(self, name, health, xp, attack, heal, movement, damage):
+        super().__init__(name, health, xp, attack, heal, movement, damage)
