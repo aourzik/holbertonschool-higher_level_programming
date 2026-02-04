@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""This module defines an abstract class Shape and two concrete classes
-Circle an Rectangle"""
+"""
+This module defines an abstract class Shape and two concrete classes
+Circle an Rectangle
+"""
 
 from abc import ABC, abstractmethod
 import math
@@ -20,8 +22,8 @@ class Shape(ABC):
 class Circle(Shape):
     """Defines a Circle, subclass of Shape"""
 
-    def __init__(self, radius):
-        """Initialise the circle radius argument"""
+    def __init__(self, radius=0):
+        """Initialize the circle radius argument"""
         self.radius = radius
 
     def area(self):
@@ -37,7 +39,7 @@ class Rectangle(Shape):
     """Defines a Rectangle, subclass of Shape"""
 
     def __init__(self, width, height):
-        """Initialise the width and height arguments"""
+        """Initialize the width and height arguments"""
         self.width = width
         self. height = height
 
@@ -48,3 +50,9 @@ class Rectangle(Shape):
     def perimeter(self):
         """Defines the perimeter of the rectangle"""
         return (self.width + self.height) * 2
+
+
+def shape_info(shape):
+    """Prints the area and perimeter of shape"""
+    print("Area:", shape.area())
+    print("Perimeter:", shape.perimeter())
