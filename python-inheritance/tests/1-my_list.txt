@@ -1,4 +1,4 @@
->>> lookup = __import__('1-my_list').my_list
+>>> lookup = __import__('lookup').lookup
 
 
 >>> isinstance(lookup(5), list)
