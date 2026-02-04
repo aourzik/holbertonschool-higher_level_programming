@@ -12,10 +12,12 @@ class Shape(ABC):
     """Defines area abstract method and perimeter method"""
     @abstractmethod
     def area(self):
+        """Return the area of the class"""
         pass
 
     @abstractmethod
     def perimeter(self):
+        """Return the area of the class"""
         pass
 
 
