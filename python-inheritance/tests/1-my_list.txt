@@ -1,0 +1,39 @@
+>>> lookup = __import__('1-my_list').my_list
+
+
+>>> isinstance(lookup(5), list)
+True
+
+
+>>> '__add__' in lookup(10)
+True
+
+
+>>> 'upper' in lookup("hello")
+True
+
+
+>>> 'append' in lookup([1, 2, 3])
+True
+
+
+>>> 'keys' in lookup({})
+True
+
+
+>>> 'count' in lookup((1, 2))
+True
+
+
+>>> 'add' in lookup(set())
+True
+
+
+>>> '__bool__' in lookup(None)
+True
+
+
+>>> my_list = [1, 2, 3]
+>>> lookup(my_list)
+>>> my_list
+[1, 2, 3]
