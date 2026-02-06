@@ -26,7 +26,7 @@ class Circle(Shape):
 
     def __init__(self, radius=0):
         """Initialize the circle radius argument"""
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Defines the area of the Circle"""
