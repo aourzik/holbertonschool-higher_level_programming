@@ -21,10 +21,11 @@ class VerboseList(list):
 
     def remove(self, i):
         """Defines a class that remove an item from a list."""
-        super().remove(i)
         print(f"Removed [{i}] from the list.")
+        super().remove(i)
 
-    def pop(self, index=0):
+    def pop(self, index=-1):
         """Defines a class that pops an item in a list."""
-        super().pop(index)
-        print(f"Popped [{index}] from the list.")
+        i = self[index]
+        print(f"Popped [{i}] from the list.")
+        return super().pop(index)
