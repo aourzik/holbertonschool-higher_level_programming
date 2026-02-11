@@ -22,3 +22,7 @@ class Student:
             if key in self.__dict__:
                 filtered[key] = self.__dict__[key]
         return filtered
+
+    def reload_from_json(self, json):
+        """Replaces all attributes of the Student instance"""
+        self.__dict__ = json
