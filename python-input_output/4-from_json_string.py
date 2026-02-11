@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """Module that defines a function that returns a Python
 object from JSON"""
 
