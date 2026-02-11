@@ -4,10 +4,10 @@ of integers representing the Pascal's triangle"""
 
 
 def pascal_triangle(n):
-    """Returns the Pascal's triangle"""
+    """Pascal's triangle function"""
     if n <= 0:
         return []
- 
+
     triangle = [[1]]
 
     for i in range(1, n):
