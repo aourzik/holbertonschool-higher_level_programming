@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Module that defines a class that defines a student"""
 
-class student:
+
+class Student:
     """Defines a student by public instances"""
 
     def __init__(self, first_name, last_name, age):
