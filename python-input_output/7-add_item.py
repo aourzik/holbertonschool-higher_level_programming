@@ -12,7 +12,7 @@ filename = "add_item.json"
 
 try:
     items = load_from_json_file(filename)
-except FileNotFoundError:
+except Exception:
     item = []
 
 items.extend(sys.argv[1:])
