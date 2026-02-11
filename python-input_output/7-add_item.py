@@ -18,9 +18,10 @@ def load_from_json_file(filename):
 
 filename = "add_item.json"
 
-args = sys.argv[1:]
+try:
+    items = load_from_json_file(filename)
+except FileNotFoundError:
+    item = []
 
-items = load_from_json_file(filename)
-
-items.extend(args)
+items.extend(sys.argv[1:])
 save_to_json_file(items, filename)
