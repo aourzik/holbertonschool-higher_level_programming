@@ -15,13 +15,11 @@ def convert_csv_to_json(csv_filename):
     try:
         data = []
 
-        # Read CSV file and convert each row to a dictionary
         with open(csv_filename, mode="r", encoding="utf-8") as csv_file:
             reader = csv.DictReader(csv_file)
             for row in reader:
                 data.append(row)
 
-        # Write serialized JSON data to data.json
         with open("data.json", mode="w", encoding="utf-8") as json_file:
             json.dump(data, json_file, indent=4)
 
