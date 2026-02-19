@@ -21,7 +21,7 @@ def get_usernames():
 @app.route("/users/<username>")
 def get_user(username):
     if username not in users:
-        return jsonify({"error": "user not found"}), 404
+        return jsonify({"error": "User not found"}), 404
     return jsonify(users[username])
 
 @app.route("/add_user", methods=["POST"])
@@ -41,6 +41,7 @@ def add_user():
     
     users[username] = data
 
-    return jsonify({"message": "added", "user": data}), 201
+    return jsonify({"message": "User added", "user": data}), 201
 
-if __name__ == "__main__":app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
