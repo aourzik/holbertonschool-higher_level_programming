@@ -40,7 +40,7 @@ def products():
     elif source == 'json':
         products_dict = read_json('products.json')
     else:
-        return render_template('products.html',
+        return render_template('product_display.html',
                                error='Invalid source specified',
                                products=[])
     
@@ -48,7 +48,7 @@ def products():
         try:            
             products_id = int(products_id)
         except ValueError:
-            return render_template('products.html',
+            return render_template('product_display.html',
                                    error='Invalid product ID specified',
                                    products=[])
     
@@ -58,13 +58,13 @@ def products():
                 filtered_products.append(product)
     
         if not filtered_products:
-            return render_template('products.html',
+            return render_template('product_display.html',
                                 error='No products found with the specified criteria',
                                 products=[])
     
-        return render_template('products.html', products=filtered_products)
+        return render_template('product_display.html', products=filtered_products)
     
-    return render_template('products.html', products=products_dict) 
+    return render_template('product_display.html', products=products_dict) 
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
