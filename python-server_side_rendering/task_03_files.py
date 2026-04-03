@@ -50,12 +50,12 @@ def products():
             products_id = int(products_id)
         except ValueError:
             return render_template('product_display.html',
-                                   error='Wrong source',
+                                   error='Invalid product ID',
                                    products=[])
     
         filtered_products = []
         for product in products_dict:
-            if products_id is None or product['id'] == products_id:
+            if product.get('id') == products_id:
                 filtered_products.append(product)
     
         if not filtered_products:
