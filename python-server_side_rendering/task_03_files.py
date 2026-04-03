@@ -60,10 +60,10 @@ def products():
     
         if not filtered_products:
             return render_template('product_display.html',
-                                error='No products found with the specified criteria',
+                                error='Product not found',
                                 products=[])
     
-        return render_template('product_display.html', products=products_dict)
+        return render_template('product_display.html', products=filtered_products)
     
     return render_template('product_display.html', products=products_dict) 
 
