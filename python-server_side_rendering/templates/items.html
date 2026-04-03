@@ -9,7 +9,7 @@
     {% include "header.html" %}
     <h1>Items List</h1>
 
-    {% if not items %}
+    {% if items %}
     <ul>
         {% for item in items %}
         <li>{{ item }}</li>
