@@ -36,7 +36,7 @@ print(id(my_list))
 ```
 
 ### Immutable Objects
-Immutable objects cannot be modified once created. These include **int**, **float**, **string**, **tuple**, and **frozenset**. If you attempt to "change" an immutable object, Python does not modify the original; instead, it creates a brand-new object with a new identity (a different memory address).
+Immutable objects cannot be modified once created. These include `int`, `float`, `string`, `tuple`, and `frozenset`. If you attempt to "change" an immutable object, Python does not modify the original; instead, it creates a brand-new object with a new identity (a different memory address).
 
 ```python
 s = "Hello"
