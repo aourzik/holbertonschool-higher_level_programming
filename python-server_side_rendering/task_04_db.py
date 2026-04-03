@@ -47,6 +47,7 @@ def read_sqlite(db_name):
                 'category': row[2],
                 'price': row[3],
             })
+        conn.close()
         return products
     except sqlite3.Error:
         return []
@@ -60,7 +61,7 @@ def products():
         products_dict = read_csv('products.csv')
     elif source == 'json':
         products_dict = read_json('products.json')
-    elif source == 'sqlite':
+    elif source == 'sql':
         products_dict = read_sqlite('products.db')
     else:
         return render_template('product_display.html',
