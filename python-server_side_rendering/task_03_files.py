@@ -19,6 +19,7 @@ def read_csv(filename):
                     'category': row['category'],
                     'price': float(row['price']),
                 })
+            return products
     except FileNotFoundError:
         return []
 
@@ -62,7 +63,7 @@ def products():
                                 error='No products found with the specified criteria',
                                 products=[])
     
-        return render_template('product_display.html', products=filtered_products)
+        return render_template('product_display.html', products=products_dict)
     
     return render_template('product_display.html', products=products_dict) 
 
