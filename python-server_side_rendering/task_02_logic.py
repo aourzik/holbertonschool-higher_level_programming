@@ -21,7 +21,7 @@ def contact():
 def items():
     with open('items.json') as f:
         items = json.load(f)
-    return render_template('items.html', items=items)
+    return render_template('items.html', items=items.get('items', []))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
