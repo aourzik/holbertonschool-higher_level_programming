@@ -1,6 +1,7 @@
 #!/usr/bin/venv python3
 """Module that uses Jinja2 to generate HTML files from a template and a list of attendees"""
 from flask import Flask, render_template
+import json
 
 app = Flask(__name__)
 
@@ -19,8 +20,8 @@ def contact():
 @app.route('/items')
 def items():
     with open('items.json') as f:
-        data = f.read()
-    items = eval(data)['items']
+        data = json.load(f)
+    items = data.get('items', [])
     return render_template('items.html', items=items)
 
 if __name__ == '__main__':
