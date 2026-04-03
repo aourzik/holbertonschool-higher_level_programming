@@ -1,38 +1,44 @@
 #!/usr/bin/python3
-import os
+"""Simple templating module"""
+
 
 def generate_invitations(template, attendees):
+    """Generate invitation files from a template and a list of attendees"""
+    placeholders = ["name", "event_title", "event_date", "event_location"]
+
     if not isinstance(template, str):
-        raise TypeError("Template must be a string")
+        print("Error: template must be a string.")
         return
-    if not isinstance(attendees, list) or not all(isinstance(a, dict) for a in attendees):
-        raise TypeError("Attendees must be a list of dictionaries")
+
+    if not isinstance(attendees, list):
+        print("Error: attendees must be a list of dictionaries.")
         return
-    if template.strip() == "":
-        raise ValueError("Template cannot be empty")
+
+    if not all(isinstance(attendee, dict) for attendee in attendees):
+        print("Error: attendees must be a list of dictionaries.")
         return
-    
+
+    if template == "":
+        print("Template is empty, no output files generated.")
+        return
+
     if len(attendees) == 0:
-        raise ValueError("Attendees list cannot be empty")
+        print("No data provided, no output files generated.")
         return
-    
-    fields = ["name", "event_title", "event_date", "event_location"]
 
-    for i, attendee in enumerate(attendees, start=1):
-        output_text = template
-        
-        for field in fields:
-            value = attendee.get(field)
+    for i, attendee in enumerate(attendees, 1):
+        content = template
 
+        for key in placeholders:
+            value = attendee.get(key)
             if value is None:
                 value = "N/A"
+            content = content.replace("{" + key + "}", str(value))
 
-            output_text = output_text.replace(f"{{{field}}}", str(value))
-
-        filename = f"output_{i}.txt"
+        filename = "output_{}.txt".format(i)
 
         try:
-            with open(filename, "w") as file:
-                file.write(output_text)
+            with open(filename, "w", encoding="utf-8") as file:
+                file.write(content)
         except Exception as e:
-            print(f"Error occurred while writing to {filename}: {e}")
+            print("Error writing file {}: {}".format(filename, e))
