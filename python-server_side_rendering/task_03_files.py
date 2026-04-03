@@ -42,7 +42,7 @@ def products():
         products_dict = read_json('products.json')
     else:
         return render_template('product_display.html',
-                               error='Invalid source specified',
+                               error='Wrong source',
                                products=[])
     
     if products_id is not None:
@@ -50,7 +50,7 @@ def products():
             products_id = int(products_id)
         except ValueError:
             return render_template('product_display.html',
-                                   error='Invalid product ID specified',
+                                   error='Wrong source',
                                    products=[])
     
         filtered_products = []
