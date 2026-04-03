@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Display</title>
+</head>
+
+<body>
+    {% include "header.html" %}
+    <h1>Product Display</h1>
+
+    {% if product %}
+    <p>Name: {{ product.name }}</p>
+    <p>Price: ${{ product.price }}</p>
+    <p>Category: {{ product.category }}</p>
+    {% else %}
+    <p>No product found.</p>
+    {% endif %}
+
+    {% include "footer.html" %}
+</body>
+
+</html>
