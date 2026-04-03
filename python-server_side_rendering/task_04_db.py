@@ -67,7 +67,7 @@ def products():
         return render_template('product_display.html',
                                error='Wrong source',
                                products=[])
-    
+   
     if products_id is not None:
         try:            
             products_id = int(products_id)
